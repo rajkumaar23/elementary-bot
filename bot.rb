@@ -11,7 +11,7 @@ client = Twitter::REST::Client.new do |config|
 end
 
 numberOfTweets = 50
-searchKeywords = ['@elementary', 'elementaryOS', '"elementary OS"', '#elementaryOS']
+searchKeywords = ['@elementary', #elementaryOS']
 
 client.search(searchKeywords.join(' OR '), lang: 'en').take(numberOfTweets).collect do |tweet|
   client.retweet tweet
